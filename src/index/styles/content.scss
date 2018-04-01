@@ -1,0 +1,36 @@
+$sm: 767.68px;
+$md: 991.98px;
+
+.content {
+  background-image: url(../../assets/images/apple_image.svg);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.block-1 {
+  flex: 0 0 33.333%;
+  border: 2px solid red;
+  min-height: 200px;
+  @media (max-width: $sm){
+    flex: 0 0 100%;
+  }
+}
+[class*="col-"] {
+
+}
+
+.block-2 {
+  flex: 0 0 66.667%;
+  border: 2px solid red;
+  min-height: 200px;
+  @media (max-width: $sm) {
+    flex: 0 0 100%;
+  }
+}
+
+.block-3 {
+  flex: 0 0 100%;
+  border: 2px solid red;
+  min-height: 200px;
+}

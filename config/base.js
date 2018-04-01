@@ -9,7 +9,8 @@ const baseConf = (_path) => {
     // and add path and name to entry array
     const VENDORS_NAME = 'vendors';
     const entry = {
-        index: ['babel-polyfill', './src/index/index.js']
+        index: ['./src/index/index.js'],
+        'lesson-9': ['./src/lesson-9/lesson-9.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
@@ -87,11 +88,11 @@ const baseConf = (_path) => {
                      * You can add here any file extension you want to get copied to your output
                      */
                     test: /\.(png|jpg|jpeg|gif|svg)$/,
-                    loader: 'file-loader?publicPath=../&name=assets/images/[name].[ext]'
+                    loader: 'file-loader?publicPath=./&name=assets/images/[name].[ext]'
                 },
                 {
                     test: /\.(eot|ttf|woff|woff2)$/,
-                    loader: 'file-loader?publicPath=../&name=assets/fonts/[name].[ext]'
+                    loader: 'file-loader?publicPath=./&name=assets/fonts/[name].[ext]'
                 }
             ]
         },
