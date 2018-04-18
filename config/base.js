@@ -10,7 +10,9 @@ const baseConf = (_path) => {
     const VENDORS_NAME = 'vendors';
     const entry = {
         index: ['./src/index/index.js'],
-        'lesson-9': ['./src/lesson-9/lesson-9.js'],
+        'lesson-10': ['./src/lesson-10/lesson-10.js'],
+        'lesson-12': ['./src/lesson-12/lesson-12.js'],
+        'lesson-13': ['./src/lesson-13/lesson-13.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
@@ -22,7 +24,7 @@ const baseConf = (_path) => {
             filename: `./${name}.html`,
         }));
         acc.push(new ExtractTextPlugin({
-            filename: `styles/[name].css`,
+            filename: `[name].css`,
             allChunks: false
         }));
 
@@ -88,11 +90,11 @@ const baseConf = (_path) => {
                      * You can add here any file extension you want to get copied to your output
                      */
                     test: /\.(png|jpg|jpeg|gif|svg)$/,
-                    loader: 'file-loader?publicPath=./&name=assets/images/[name].[ext]'
+                    loader: 'file-loader?publicPath=./&[name].[ext]'
                 },
                 {
                     test: /\.(eot|ttf|woff|woff2)$/,
-                    loader: 'file-loader?publicPath=./&name=assets/fonts/[name].[ext]'
+                    loader: 'file-loader?publicPath=./&[name].[ext]'
                 }
             ]
         },
