@@ -1,4 +1,6 @@
 import './lesson-13.scss'
+import './scripts/accordion'
+import './scripts/oop'
 
 /**
  * @param {Element} dropdownContainer Html element for dropdown
@@ -60,10 +62,5 @@ function dropdown (dropdownContainer) {
   });
 }
 
-dropdown(document.querySelector('#countries'));
-dropdown(document.querySelector('#movies'));
-
-
-document.querySelector('body').addEventListener('click', () => {
-  console.log('Clicked on body');
-});
+// dropdown(document.querySelector('#countries'));
+// dropdown(document.querySelector('#movies'));

@@ -48,3 +48,35 @@ body {
     }
   }
 }
+
+.accordion {
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 400px;
+  &__block {
+    &.active {
+      .accordion__content {
+        height: 100%;
+        transform: scaleY(1);
+        transition: all 0.5s;
+      }
+    }
+  }
+  &__title {
+    padding: 1rem;
+    background-color: magenta;
+    color: #FFF;
+  }
+  &__content {
+    height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
+
+
+
+
+
+
+
