@@ -1,10 +1,5 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-
-class AppComponent extends React.Component{
-  render() {
-    return <div>Hello world!</div>
-  }
-}
+import { AppComponent } from './components/AppComponent/AppComponent.jsx';
 
 render(<AppComponent />, document.getElementById('root'));
